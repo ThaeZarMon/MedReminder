@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medication & Eye Drop Reminder</title>
+  <link rel="stylesheet" href="color.css">
+
+  <link rel="manifest" href="manifest.json">
+  
+  <!-- 1. ADD TESSERACT OCR LIBRARY HERE -->
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+</head>
+<body>
+  <main class="app-container">
+    <h1>Medication Reminder</h1>
+
+    <section class="card">
+      <h2>Add New Dose</h2>
+      <form id="medForm">
+        <!-- 2. ADD PRESCRIPTION FILE INPUT HERE -->
+        <label for="prescriptionFile">Scan Prescription Label (Optional):</label>
+        <input type="file" id="prescriptionFile" accept="image/*">
+
+        <label for="medName">Medication Name:</label>
+        <input type="text" id="medName" required placeholder="e.g., Timolol Eye Drops">
+
+        <label for="medType">Type:</label>
+        <select id="medType">
+          <option value="eye_drop">Eye Drop</option>
+          <option value="pill">Pill / Tablet</option>
+        </select>
+
+        <label for="medTime">Scheduled Time:</label>
+        <input type="time" id="medTime" required>
+
+        <button type="submit">Save Reminder</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Today's Schedule</h2>
+      <ul id="scheduleList"></ul>
+    </section>
+  </main>
+
+  <script src="reminder.js"></script>
+</body>
+</html>
