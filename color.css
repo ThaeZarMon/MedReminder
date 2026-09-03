@@ -1,8 +1,15 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f7f6;
+  /* background-color: #F8FAFC; */
+  background: linear-gradient(to bottom left, white, #a4e7e0);
   margin: 0;
   padding: 16px;
+}
+
+nav h1{
+  margin-left:350px;
+  margin-right:100px;
+  color:#1E293B
 }
 
 .app-container {
@@ -10,12 +17,20 @@ body {
   margin: 0 auto;
 }
 
+.card h2{
+  color:#1E293B
+}
+
 .card {
-  background: #ffffff;
+  background: #00A896;
   padding: 16px;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   margin-bottom: 16px;
+}
+
+.text{
+  color:#1E293B
 }
 
 form {
@@ -32,7 +47,7 @@ input, select, button {
 }
 
 button {
-  background-color: #007bff;
+  background-color: white;
   color: white;
   font-weight: bold;
   border: none;
